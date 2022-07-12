@@ -20,8 +20,7 @@ public class BeanConfiguration {
 	public RestHighLevelClient client() {
 		ClientConfiguration clientConfiguration
 				= ClientConfiguration.builder()
-//				.connectedTo(System.getenv("ES_LOAD_BALANCER"))
-				.connectedTo("localhost:9200")
+				.connectedTo(System.getenv("ES_LOAD_BALANCER"))
 				.build();
 
 		return RestClients.create(clientConfiguration).rest();
